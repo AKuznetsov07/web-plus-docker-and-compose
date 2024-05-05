@@ -5,6 +5,8 @@ services:
     networks:
       - back-net
     container_name: backend
+    image: kp-back-img
+    restart: unless-stopped
     build:
       context: backend
       dockerfile: Dockerfile
@@ -17,6 +19,8 @@ services:
     networks:
       - front-net
     container_name: frontend
+    image: kp-front-img
+    restart: unless-stopped
     build:
       context: frontend
       dockerfile: Dockerfile
@@ -27,6 +31,7 @@ services:
     networks:
       - back-net
     container_name: postgres
+    restart: unless-stopped
     image: postgres:14-alpine
     volumes:
       - postgress_data:/var/lib/postgresql/data
@@ -37,6 +42,7 @@ services:
     networks:
       - back-net
     container_name: adminer
+    restart: unless-stopped
     image: adminer
     ports:
       - 8081:8080
