@@ -4,6 +4,6 @@
 
 IP адрес 158.160.151.96
 
-Frontend https://amkuznetsov.docker.nomoredomainswork.ru/
+Frontend https://amkuznetsov.docker.nomoredomainswork.ru/   -  http://158.160.151.96:8080/
 
-Backend https://api.amkuznetsov.docker.nomoredomainswork.ru/
+Backend https://api.amkuznetsov.docker.nomoredomainswork.ru/   -  http://158.160.151.96:4000/
